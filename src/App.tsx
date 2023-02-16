@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useDesignSystem } from '@blsodie/ui2/build';
+import Button from '@blsodie/ui2/build/component/Button';
+import Input from '@blsodie/ui2/build/component/Input';
+
 import './App.css';
 
 function App() {
+  const status = useDesignSystem('63dd25bef9f7720ae565e38a');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <div className='sample-form'>
+          <div className='login-text'>Login</div>
+          <Input
+            styles={{ base: { marginBottom: 15 } }}
+            placeholder='Email'
+          />
+          <Input
+            styles={{ base: { marginBottom: 25 } }}
+            placeholder='Password'
+          />
+          <div>
+            <Button>
+              Login
+            </Button>
+          </div>
+
+        </div>
+      </div>
+      
     </div>
   );
 }
