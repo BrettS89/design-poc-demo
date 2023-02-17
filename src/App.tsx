@@ -5,7 +5,7 @@ import Input from '@blsodie/ui2/build/component/Input';
 import './App.css';
 
 function App() {
-  const status = useDesignSystem('63dd25bef9f7720ae565e38a');
+  const status = useDesignSystem('63e98d4156d2d91055a31c18');
 
   return (
     <div className="App">
